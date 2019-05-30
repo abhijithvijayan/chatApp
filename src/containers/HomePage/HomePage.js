@@ -1,15 +1,18 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container } from 'semantic-ui-react';
+import ChatList from '../../components/ChatList';
+import ChatHeader from '../../components/ChatHeader';
+import MessageSendForm from '../../components/MessageSendForm';
 
 import './styles.scss';
 
 const HomePage = () => {
     return (
         <Container>
-            <section id="home">
-                <div className="text-center">
-                    <p>Hello World!</p>
-                </div>
+            <section id="chat__section">
+                <ChatHeader />
+                <ChatList />
+                <MessageSendForm />
             </section>
         </Container>
     );
