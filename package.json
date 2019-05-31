@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "author": "abhijithvijayan",
-  "homepage": "https://abhijithvijayan.github.io/react-starter/",
   "dependencies": {
     "axios": "^0.18.0",
     "firebase": "^6.1.0",
