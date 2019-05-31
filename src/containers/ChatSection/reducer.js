@@ -1,4 +1,4 @@
-import { SEND_MESSAGE } from './constants';
+import { FETCH_MESSAGES } from './constants';
 
 const INITIAL_STATE = {
     messages: {},
@@ -6,12 +6,10 @@ const INITIAL_STATE = {
 
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
-        case SEND_MESSAGE: {
+        case FETCH_MESSAGES: {
             return {
-                messages: {
-                    ...state.messages,
-                    [action.payload.messageBody.when + action.payload.messageBody.who.uid]: action.payload.messageBody,
-                },
+                ...state,
+                messages: action.payload,
             };
         }
         default:

@@ -12,12 +12,20 @@ class MessageSendForm extends Component {
     };
 
     onSubmit = formValues => {
+        const { userId } = this.props;
         const messageBody = {
-            who: this.props.userId,
+            who: {
+                id: userId.uid,
+                displayName: userId.displayName,
+                email: userId.email,
+                photoURL: userId.photoURL,
+                phone: userId.phoneNumber,
+            },
             what: formValues.message,
             when: new Date().valueOf(),
         };
         this.props.sendMessage(messageBody);
+        // reset form input
         this.props.reset();
     };
 

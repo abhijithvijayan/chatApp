@@ -1,3 +1,5 @@
+import firebase from 'firebase';
+
 const firebaseConfig = {
     apiKey: 'AIzaSyA_yQWeMMtW_rvFzF69qvOvTwUCHukQkjI',
     authDomain: 'chat-in-react-node-app.firebaseapp.com',
@@ -8,4 +10,8 @@ const firebaseConfig = {
     appId: '1:55965809323:web:e81322bf0d1e1e8e',
 };
 
-export default firebaseConfig;
+firebase.initializeApp(firebaseConfig);
+
+const databaseRef = firebase.database().ref();
+
+export const chatRef = databaseRef.child('messages');
