@@ -6,7 +6,7 @@ import MessageSendForm from '../../components/MessageSendForm';
 
 import './styles.scss';
 
-const HomePage = () => {
+const ChatSection = () => {
     return (
         <Container>
             <section id="chat__section">
@@ -18,4 +18,4 @@ const HomePage = () => {
     );
 };
 
-export default HomePage;
+export default ChatSection;
