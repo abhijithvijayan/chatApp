@@ -1,11 +1,10 @@
 import { SEND_MESSAGE } from './constants';
 
-export const sendMessage = (sender, message) => {
+export const sendMessage = messageBody => {
     return {
         type: SEND_MESSAGE,
         payload: {
-            sender,
-            message,
+            messageBody,
         },
     };
 };
