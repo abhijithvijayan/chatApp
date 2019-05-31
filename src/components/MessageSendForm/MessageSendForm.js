@@ -18,6 +18,7 @@ class MessageSendForm extends Component {
             when: new Date().valueOf(),
         };
         this.props.sendMessage(messageBody);
+        this.props.reset();
     };
 
     renderInput = formProps => {
