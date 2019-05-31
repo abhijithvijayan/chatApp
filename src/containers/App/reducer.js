@@ -4,7 +4,7 @@
  *
  */
 
-import { SIGN_IN, SIGN_OUT } from '../ChatSection/constants';
+import { SIGN_IN, SIGN_OUT } from './constants';
 
 const INITIAL_STATE = {
     isSignedIn: null,

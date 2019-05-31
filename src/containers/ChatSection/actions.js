@@ -2,7 +2,6 @@ import { FETCH_MESSAGES } from './constants';
 import { chatRef } from '../../utils/firebase';
 
 export const sendMessage = messageBody => {
-    console.log(messageBody);
     return async dispatch => {
         chatRef.push().set(messageBody);
     };

@@ -17,7 +17,7 @@ class MessageSendForm extends Component {
             who: {
                 id: userId.uid,
                 displayName: userId.displayName,
-                email: userId.email,
+                // email: userId.email,
                 photoURL: userId.photoURL,
                 phone: userId.phoneNumber,
             },
